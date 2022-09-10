@@ -12,6 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import com.dmsoftware.calculator.presentation.calculator.CalculatorUiAction
+import com.dmsoftware.calculator.presentation.calculator.HighlightLevel
 
 
 @Composable

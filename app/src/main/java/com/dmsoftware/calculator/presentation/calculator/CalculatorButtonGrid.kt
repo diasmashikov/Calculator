@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.dmsoftware.calculator.domain.CalculatorAction
+import com.dmsoftware.calculator.presentation.calculator.CalculatorUiAction
 
 @Composable
 fun CalculatorButtonGrid(
@@ -27,7 +28,7 @@ fun CalculatorButtonGrid(
                 CalculatorButton(
                     action = action,
                     modifier = Modifier.aspectRatio(1f),
-                    onClick = { onAction(action.action)}
+                    onClick = { onAction(action.action) }
                 )
             }
         }

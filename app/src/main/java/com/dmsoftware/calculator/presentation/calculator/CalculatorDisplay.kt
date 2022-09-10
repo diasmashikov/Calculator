@@ -32,7 +32,6 @@ fun CalculatorDisplay(
             maxLines = 1,
             singleLine = true,
             cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
-            readOnly = true,
             modifier = Modifier.fillMaxWidth()
         )
     }
