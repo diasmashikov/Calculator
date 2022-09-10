@@ -1,4 +1,4 @@
-package com.dmsoftware.calculator.presentation
+package com.dmsoftware.calculator.data
 
 import com.dmsoftware.calculator.domain.model.Calculation
 import com.dmsoftware.calculator.domain.repository.CalculationRepository

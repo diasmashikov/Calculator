@@ -4,7 +4,12 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import com.dmsoftware.calculator.data.FakeCalculationRepository
+import com.dmsoftware.calculator.di.AppModule
 import com.dmsoftware.calculator.presentation.calculator.CalculatorViewModel
+import dagger.hilt.android.testing.HiltAndroidRule
+import dagger.hilt.android.testing.HiltAndroidTest
+import dagger.hilt.android.testing.UninstallModules
 
 import org.junit.Before
 import org.junit.Rule
@@ -12,15 +17,20 @@ import org.junit.Test
 
 
 
-
+@HiltAndroidTest
+@UninstallModules(AppModule::class)
 class CalculatorScreenTest {
 
-    @get:Rule
+    @get:Rule(order = 0)
+    val hiltRule = HiltAndroidRule(this)
+
+    @get:Rule(order = 1)
     val composeRule = createAndroidComposeRule(MainActivity::class.java)
     private lateinit var viewModel: CalculatorViewModel
 
     @Before
     fun setUp() {
+        hiltRule.inject()
         viewModel = CalculatorViewModel(FakeCalculationRepository())
     }
 
