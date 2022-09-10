@@ -1,4 +1,4 @@
-package com.dmsoftware.calculator.presentation
+package com.dmsoftware.calculator.presentation.calculator
 
 import androidx.compose.runtime.Composable
 import com.dmsoftware.calculator.domain.CalculatorAction

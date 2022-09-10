@@ -1,4 +1,4 @@
-package com.dmsoftware.calculator.presentation
+package com.dmsoftware.calculator.presentation.calculator
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
